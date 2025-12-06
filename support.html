@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الدعم الفني | Craft Egypt</title>
+    <link rel="stylesheet" href="support.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <a href="index.html" class="home-button" aria-label="العودة إلى الصفحة الرئيسية">
+     الصفحة الرئيسية
+    </a>
+    <div class="success-alert" id="successAlert">
+        ✅ تم إرسال طلب الدعم بنجاح! شكراً لك.
+    </div>
+
+    <div class="support-container">
+        <div class="support-card">
+            <h2>📞 تواصل مع الدعم الفني</h2>
+            <p>نحن هنا لمساعدتك. أرسل لنا رسالة وسنرد عليك في أسرع وقت ممكن.</p>
+            
+            <form id="supportForm" action="#" method="POST"> 
+                
+                <div class="form-group">
+                    <label for="name">الاسم كاملاً:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">البريد الإلكتروني:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="subject">نوع المشكلة/الاستفسار:</label>
+                    <select id="subject" name="subject" required>
+                        <option value="" disabled selected>اختر نوع الطلب</option>
+                        <option value="technical_issue">مشكلة تقنية</option>
+                        <option value="content_inquiry">استفسار محتوى (حرفة/منتج)</option>
+                        <option value="general_inquiry">استفسار عام</option>
+                        <option value="report_bug">إبلاغ عن خطأ (Bug)</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">رسالتك بالتفصيل:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                
+                <button type="submit" class="submit-btn">إرسال طلب الدعم</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        const form = document.getElementById('supportForm');
+        const alertBox = document.getElementById('successAlert');
+
+        form.addEventListener('submit', function (event) {
+            // 1. منع الإرسال الافتراضي (وهذا يضمن عدم مغادرة الصفحة أو الحاجة لرابط حقيقي)
+            event.preventDefault(); 
+
+            // التأكد من أن جميع الحقول المطلوبة مملوءة قبل إظهار الرسالة
+            if (form.checkValidity()) {
+                
+                // 2. إظهار الرسالة من الأعلى
+                alertBox.style.top = '0';
+                
+                // 3. إعادة ضبط النموذج (مسح الحقول)
+                form.reset(); 
+                
+                // 4. إخفاء الرسالة بعد 5 ثواني
+                setTimeout(() => {
+                    alertBox.style.top = '-100px'; 
+                }, 5000); 
+
+            } else {
+                // إذا كان هناك حقل فارغ، يظهر خطأ المتصفح التلقائي
+                event.target.reportValidity();
+            }
+        });
+    </script>
+</body>
+</html>

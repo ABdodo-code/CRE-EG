@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المتجر | Craft Egypt</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="111.css">
+</head>
+<body>
+
+    <header>
+    <a href="index.html" class="logo">Craft Egypt</a>
+    
+    <div class="utility-group">
+        
+        <a href="index.html" class="header-link home-link">الرئيسية</a>
+
+        <div class="header-cart" onclick="window.location.href='store-1.html'">
+            <span class="icon">🛒</span>
+            <span class="text">السلة</span>
+            <span class="count" id="cartCount">0</span>
+        </div>
+        
+    </div>
+</header>
+
+    <div class="filters">
+        <button class="filter-btn active" onclick="filterProducts('all')">الكل</button>
+        <button class="filter-btn" onclick="filterProducts('نسيج')">نسيج وسجاد</button>
+        <button class="filter-btn" onclick="filterProducts('نحاس')">نحاس ومعادن</button>
+        <button class="filter-btn" onclick="filterProducts('فخار')">فخار وخزف</button>
+        <button class="filter-btn" onclick="filterProducts('أخشاب')">أخشاب وصدف</button>
+    </div>
+
+    <div class="products-container" id="productsGrid">
+
+    <!-- 1 -->
+    <div class="product-card" data-cat="نسيج">
+        <img src="download (3).jfif" class="product-img">
+        <div class="card-content">
+            <span class="category-tag">نسيج</span>
+            <h3 class="product-title">سجادة كليم يدوي - ألوان زاهية</h3>
+            <div class="product-price">450 ج.م</div>
+            <button class="buy-btn" onclick="addToCart('سجادة كليم يدوي - ألوان زاهية')">إضافة للسلة 🛍️</button>
+        </div>
+    </div>
+
+    <!-- 2 -->
+    <div class="product-card" data-cat="نحاس">
+        <img src="Antika Nakışlı Bakır Sini 78'cm.jfif" class="product-img">
+        <div class="card-content">
+            <span class="category-tag">نحاس</span>
+            <h3 class="product-title">صينية نحاس منقوشة (وسط)</h3>
+            <div class="product-price">850 ج.م</div>
+            <button class="buy-btn" onclick="addToCart('صينية نحاس منقوشة (وسط)')">إضافة للسلة 🛍️</button>
+        </div>
+    </div>
+
+    <!-- 3 -->
+    <div class="product-card" data-cat="فخار">
+        <img src="download (4).jfif" class="product-img">
+        <div class="card-content">
+            <span class="category-tag">فخار</span>
+            <h3 class="product-title">فازة فخار ريفية</h3>
+            <div class="product-price">150 ج.م</div>
+            <button class="buy-btn" onclick="addToCart('فازة فخار ريفية')">إضافة للسلة 🛍️</button>
+        </div>
+    </div>
+
+    <!-- 4 -->
+    <div class="product-card" data-cat="أخشاب">
+        <img src="Egyptian White Rectangle Wooden Jewelry Box with Mother of Pearl Inlay.jfif" class="product-img">
+        <div class="card-content">
+            <span class="category-tag">أخشاب</span>
+            <h3 class="product-title">صندوق مجوهرات أرابيسك</h3>
+            <div class="product-price">320 ج.م</div>
+            <button class="buy-btn" onclick="addToCart('صندوق مجوهرات أرابيسك')">إضافة للسلة 🛍️</button>
+        </div>
+    </div>
+
+    <!-- 5 -->
+    <div class="product-card" data-cat="نسيج">
+        <img src="Egyptian khayamiya patterns, الخيامية المصرية.jfif" class="product-img">
+        <div class="card-content">
+            <span class="category-tag">نسيج</span>
+            <h3 class="product-title">مفرش خيامية رمضاني</h3>
+            <div class="product-price">200 ج.م</div>
+            <button class="buy-btn" onclick="addToCart('مفرش خيامية رمضاني')">إضافة للسلة 🛍️</button>
+        </div>
+    </div>
+
+    <!-- 6 -->
+    <div class="product-card" data-cat="نحاس">
+        <img src="do.jfif" class="product-img">
+        <div class="card-content">
+            <span class="category-tag">نحاس</span>
+            <h3 class="product-title">إبريق قهوة نحاسي قديم</h3>
+            <div class="product-price">600 ج.م</div>
+            <button class="buy-btn" onclick="addToCart('إبريق قهوة نحاسي قديم')">إضافة للسلة 🛍️</button>
+        </div>
+    </div>
+
+    <!-- 7 -->
+    <div class="product-card" data-cat="أخشاب">
+        <img src="Cafe Chess Set _ Shoppe Amber Interiors.jfif" class="product-img">
+        <div class="card-content">
+            <span class="category-tag">أخشاب</span>
+            <h3 class="product-title">طقم شطرنج مطعم بالصدف</h3>
+            <div class="product-price">1200 ج.م</div>
+            <button class="buy-btn" onclick="addToCart('طقم شطرنج مطعم بالصدف')">إضافة للسلة 🛍️</button>
+        </div>
+    </div>
+
+    <!-- 8 -->
+    <div class="product-card" data-cat="فخار">
+        <img src="طقم حلل من الفخار الخزف مقاسات مختلفه color zone pottery 52د قريه الفخار مصر القديمه ش الفسطاط القاهره.jfif" class="product-img">
+        <div class="card-content">
+            <span class="category-tag">فخار</span>
+            <h3 class="product-title">طاجن فخار للطهي</h3>
+            <div class="product-price">80 ج.م</div>
+            <button class="buy-btn" onclick="addToCart('طاجن فخار للطهي')">إضافة للسلة 🛍️</button>
+        </div>
+    </div>
+
+    <!-- 9 -->
+    <div class="product-card" data-cat="نسيج">
+        <img src="222.jfif" class="product-img">
+        <div class="card-content">
+            <span class="category-tag">نسيج</span>
+            <h3 class="product-title">شال سيوي مطرز يدوي</h3>
+            <div class="product-price">550 ج.م</div>
+            <button class="buy-btn" onclick="addToCart('شال سيوي مطرز يدوي')">إضافة للسلة 🛍️</button>
+        </div>
+    </div>
+
+    <!-- 10 -->
+    <div class="product-card" data-cat="نحاس">
+        <img src="Bungalow Rose Kaliska 13_ Wall Tabletop Lantern & Reviews _ Wayfair.jfif" class="product-img">
+        <div class="card-content">
+            <span class="category-tag">نحاس</span>
+            <h3 class="product-title">فانوس نحاس تعليق</h3>
+            <div class="product-price">350 ج.م</div>
+            <button class="buy-btn" onclick="addToCart('فانوس نحاس تعليق')">إضافة للسلة 🛍️</button>
+        </div>
+    </div>
+
+    <!-- 11 -->
+    <div class="product-card" data-cat="أخشاب">
+        <img src="Vintage Bamboo Child Chair Kids Furniture Seat Cane Stand Display Hand Made Boho Home Decor_ French Studio Vintage - Etsy.jfif" class="product-img">
+        <div class="card-content">
+            <span class="category-tag">أخشاب</span>
+            <h3 class="product-title">كرسي بامبو صغير</h3>
+            <div class="product-price">400 ج.م</div>
+            <button class="buy-btn" onclick="addToCart('كرسي بامبو صغير')">إضافة للسلة 🛍️</button>
+        </div>
+    </div>
+
+    <!-- 12 -->
+    <div class="product-card" data-cat="فخار">
+        <img src="hhhhh.jfif" class="product-img">
+        <div class="card-content">
+            <span class="category-tag">فخار</span>
+            <h3 class="product-title">مج خزف ملون</h3>
+            <div class="product-price">95 ج.م</div>
+            <button class="buy-btn" onclick="addToCart('مج خزف ملون')">إضافة للسلة 🛍️</button>
+        </div>
+    </div>
+
+</div>
+
+    <script>
+
+    let cartItems = 0;
+
+    function addToCart(name) {
+        cartItems++;
+        document.getElementById('cartCount').innerText = cartItems;
+        alert(`✅ تم إضافة "${name}" إلى عربة التسوق!`);
+    }
+
+    function filterProducts(category) {
+        document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+
+        if (window.event && window.event.target) {
+            window.event.target.classList.add('active');
+        }
+
+        const products = document.querySelectorAll('.product-card');
+
+        products.forEach(card => {
+            const cat = card.getAttribute('data-cat');
+            card.style.display = (category === 'all' || category === cat) ? 'block' : 'none';
+        });
+    }
+
+</script>
+</body>
+</html>
