@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>تفاصيل الحرفة — Craft Egypt</title>
+  <link rel="stylesheet" href=".16.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html">Craft Egypt</a>
+
+      <nav class="main-nav">
+      </nav>
+    </div>
+  </header>
+
+  <main class="container page">
+
+    <section class="hero">
+      <div class="hero-left">
+        <div class="main-photo">
+          <img id="mainImage" src="img/3.3.3.3.3.jfif" alt="حرفة الخط العربي">
+        </div>
+
+        <div class="thumbs" aria-hidden="false">
+        </div>
+      </div>
+
+      <aside class="hero-right">
+        <h1 class="item-title">الخط العربي التقليدي</h1>
+        <p class="item-short">كتابة زخرفية يدوية بأنواع خطوط عربية (نسخ، ثلث، رقعة) لأغراض فنية وزخرفية.</p>
+
+        <ul class="meta-list">
+          <li><span class="meta-key">نوع الحرفة:</span> <span class="meta-val">الخط العربي</span></li>
+          <li><span class="meta-key">اسم الحرفي:</span> <span class="meta-val">الأستاذ حسن الخطي</span></li>
+          <li><span class="meta-key">المحافظة:</span> <span class="meta-val">القاهرة</span></li>
+          <li><span class="meta-key">تاريخ التوثيق:</span> <span class="meta-val">2025-03-12</span></li>
+          <li><span class="meta-key">السعر:</span> <span class="meta-val">300 ج.م</span></li>
+          <li><span class="meta-key">كود المنتج:</span> 
+            <span class="meta-val code" id="prodCode">p-015</span>
+            <button class="copy-btn" onclick="copyCode()">نسخ</button>
+          </li>
+          <li><span class="meta-key">حالة الموافقة:</span> <span class="meta-val approved">تمت الموافقة ✔︎</span></li>
+        </ul>
+
+        <div class="actions">
+          <button class="btn primary" onclick="downloadCert()">تحميل الشهادة</button>
+          <a class="btn ghost" href="#education">المحتوى التعليمي</a>
+        </div>
+
+      </aside>
+    </section>
+
+    <section class="section">
+      <h2>الوصف الكامل</h2>
+      <p class="lead">
+      فن الكتابة اليدوية التقليدية بخامات خاصة وريشة أو قلم خاص، يستخدم في لوحات فنية ومواد دينية وثقافية.
+      </p>
+
+      <div class="two-col">
+        <div>
+          <h3>معلومات تقنية</h3>
+          <ul>
+            <li>الخامات: ورق خاص، حبر، قلم تقليدي</li>
+            <li>أدوات: قَلَم، حبر، مسطرة تصميم</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>قصة القطعة</h3>
+          <p>غمّس القصبة في الحبر وبدأ يرسم الحروف بدقة. كل حرف له وزن ومساحة. في النهاية تكوّن نص جميل يصلح يتعلّق كقطعة فنية.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section media">
+      <div class="media-grid">
+        <div>
+          <h2>فيديو توثيقي</h2>
+          <video controls poster="images/ibrq1.jpg" class="video" preload="metadata">
+            <source src="img/videoplayback8.mp4" type="video/mp4">
+            متصفحك لا يدعم عرض الفيديو.
+          </video>
+        </div>
+
+        <div>
+          <h2>صور إضافية</h2>
+          <div class="gallery">
+            <img src="img/3.3.jfif" alt="">
+            <img src="img/3.3.3.jfif" alt="">
+            <img src="img/3.3.3.3.jfif" alt="">
+            <img src="img/3.3.3.3.3.3.jfif" alt="">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="education" class="section">
+      <h2>المحتوى التعليمي</h2>
+      <p class="lead">سلسلة فيديوهات ودروس قصيرة تساعد المهتمين على فهم أساسيات الحرفة وتقنيات البدء.</p>
+
+      <div class="edu-grid">
+        <article class="edu-card">
+          <div class="edu-body">
+            <h3>أساسيات إمساك القلم والزوايا</h3>
+            <a class="edu-link" href="#">شاهد الدرس ▶</a>
+          </div>
+        </article>
+
+        <article class="edu-card">
+          <div class="edu-body">
+            <h3>تعلم حرف نسخ أو رقعة خطوة بخطوة</h3>
+            <a class="edu-link" href="#">شاهد الدرس ▶</a>
+          </div>
+        </article>
+
+        <article class="edu-card">
+          <div class="edu-body">
+            <h3>تركيب لوحة وتخطيط المساحة</h3>
+            <a class="edu-link" href="#">شاهد الدرس ▶</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section small">
+      <h2>مشاركات وتنزيلات</h2>
+      <div class="tools-row">
+        <button class="btn" onclick="printPage()">طباعة الصفحة</button>
+        <button class="btn" onclick="shareItem()">مشاركة</button>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© Craft Egypt — توثيق الحرف والتراث المصري</p>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.thumb').forEach(t => {
+      t.addEventListener('click', () => {
+        document.getElementById('mainImage').src = t.dataset.full;
+        document.querySelectorAll('.thumb').forEach(x=>x.classList.remove('active'));
+        t.classList.add('active');
+      });
+    });
+
+    function copyCode() {
+      const code = document.getElementById('prodCode').innerText;
+      navigator.clipboard?.writeText(code).then(()=>{
+        alert('تم نسخ الكود: ' + code);
+      }).catch(()=>{ alert('نسخ غير متاح'); });
+    }
+
+    function downloadCert(){
+      const cert = {
+        cert_id: 'CERT-' + document.getElementById('prodCode').innerText,
+        product_id: document.getElementById('prodCode').innerText,
+        title: document.querySelector('.item-title').innerText,
+        craft: document.querySelector('.meta-val').innerText || 'نحاس',
+        maker: document.querySelectorAll('.meta-val')[1]?.innerText || '—',
+        issued_at: new Date().toISOString(),
+        issued_by: 'Craft Egypt'
+      };
+      const blob = new Blob([JSON.stringify(cert, null, 2)], {type:'application/json'});
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(blob); a.download = cert.cert_id + '.json';
+      document.body.appendChild(a); a.click(); a.remove();
+    }
+
+    function printPage(){ window.print(); }
+
+    function shareItem(){
+      const title = document.querySelector('.item-title').innerText;
+      const text = document.querySelector('.item-short').innerText;
+      const url = location.href;
+      if(navigator.share){
+        navigator.share({title,text,url}).catch(()=>{});
+      } else {
+        prompt('انسخ رابط المشاركة:', url);
+      }
+    }
+  </script>
+
+</body>
+</html>
